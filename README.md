@@ -26,7 +26,7 @@ This repository contains all the codes and results of our Satellite Coverage Cla
 
 ## Results
 
-Our model achieved a validation accuracy of  and test accuracy of 0.9396 and 0.9096 respectively
+Our model achieved a validation accuracy of  and test accuracy of 0.9396 and 0.9096 respectively.
 
 ## Authors
 
