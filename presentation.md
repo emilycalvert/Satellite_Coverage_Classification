@@ -4,6 +4,7 @@
   <!-- Reveal.js dependencies -->
   <link rel="stylesheet" href="https://revealjs.com/dist/reveal.css">
   <script src="https://revealjs.com/dist/reveal.js"></script>
+  <script src="https://revealjs.com/dist/reveal.js"></script>
 
   <!-- Custom CSS -->
   <style>
@@ -20,13 +21,23 @@
 
     /* Autofit images */
     .reveal .slides img {
-      max-width: 100%;
-      max-height: 100%;
+      max-width: 70%;
+      max-height: 70%;
       object-fit: contain;
+    }
+
+    /* Zoom button */
+    .zoom-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
+  <button class="zoom-button" onclick="zoomInOut()">Zoom</button>
+
   <div class="reveal">
     <div class="slides">
 
@@ -42,8 +53,8 @@
     <h2>Credits</h2>
     <p>Presented by:</p>
     <div class="headshots">
-      <img src="C:/Users/calve/Downloads/static_visuals/emily.jfif" alt="Emily Calvert Headshot">
-      <img src="C:/Users/calve/Downloads/static_visuals/sophie.jfif" alt="Sophie Ollivier Salgado Headshot">
+      <img src="https://media.licdn.com/dms/image/D5603AQG0_StxjC4YXQ/profile-displayphoto-shrink_400_400/0/1689683284985?e=1695254400&v=beta&t=Abb1QjF7d74AwPC4GHk0kyQ8W0VTbIkxcBSx2BXuh9o" alt="Emily Calvert Headshot">
+      <img src="https://media.licdn.com/dms/image/C5603AQGYxdvyNxrm2w/profile-displayphoto-shrink_400_400/0/1597868336215?e=1695254400&v=beta&t=dKVAUW-ARYRmrZpEbLCpCe7J0SboMKILXaN6PBrTJAM" alt="Sophie Ollivier Salgado Headshot">
     </div>
     <p>Emily Calvert
        Email: calvertemily15@gmail.com
@@ -238,7 +249,7 @@
       <li>Data was gathered from various sensors and Google Maps</li>
       <li>The dataset comprises 5631 images in jpg format</li>
     </ul>
-    <img src="C:/Users/calve/Downloads/static_visuals/data_source.jpg" alt="Kaggle Header" style="max-width: 70%; margin-top: 2em;">
+    <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/data_specs.jpg" alt="Kaggle Header" style="max-width: 70%; margin-top: 2em;">
   </section>
 
 ---
@@ -251,7 +262,7 @@
       <li>The data split was as follows: Training (60%), Validation (20%), Test (20%)</li>
     </ul>
     <div class="image-container">
-      <img src=""C:/Users/calve/Downloads/static_visuals/class_imbalance_plot.png"" alt="Samples and Classes">
+      <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/class_imbalance_plot.png">
     </div>
   </section>
 
@@ -266,7 +277,7 @@ Center Crop 224x224 pixels test it in a standard and consistent way (center crop
       <li>Random horizontal flip to augment the data and prevent overfitting</li>
       <li>Normalization of pixel values using pre-calculated values from the ImageNet dataset</li>
     </ul>
-    <img src=""C:/Users/calve/Downloads/static_visuals/data_transform.jpg"" class="top-right-image" />
+    <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/data_transform.jpg" class="top-right-image" />
   </section>
 
 ---
@@ -274,16 +285,22 @@ Center Crop 224x224 pixels test it in a standard and consistent way (center crop
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes="Amount and Type of Data  A large amount of data can indicate necessity for a deeper neural network that can learn more complex patterns. The type of data also matters: is it tabular, image, text, or some other type of data? For image data, convolutional neural networks (CNNs). Distribution Pattern Pixel Intensity Distribution Desert The pixel intensity distribution for desert images shows a high mean value of 0.608, indicating that desert scenes are generally brightly lit. The range of pixel intensities, from a minimum of 0.418 to a maximum of 0.722, is relatively small. With a standard deviation of 0.058, the intensities appear to be closely grouped around the mean. WaterWater scenes exhibit a low mean pixel intensity of 0.272, possibly due to deeper water absorbing more light. The standard deviation is higher at 0.085, indicating a wider spread of pixel intensities. The pixel intensities range from 0.166 to 0.519, indicating a diversity in lighting conditions for water scenes. Green Area
   For green area images, the mean pixel intensity is even lower than for water, at 0.235. This could be due to the light absorption properties of plants. The standard deviation is very low at 0.025, suggesting that pixel intensities are very consistent within green areas. This is likely due to the consistent color of vegetation. The range of pixel intensities, from 0.169 to 0.361, is the narrowest of all categories. Cloudy Cloudy scenes present the highest mean pixel intensity of all categories at 0.613. This could be due to light scattering from the clouds. However, the standard deviation is also the highest at 0.118, indicating a wider range of pixel intensities. This variation might be due to differing levels of cloud cover and thickness. The range of pixel intensities is also the widest, from 0.089 to 0.959, suggesting a large diversity in lighting conditions for cloudy scenes.Color Channel Distributions In terms of color channel distributions, different patterns emerge for each category.Desert The mean values for R, G, and B color channels in desert scenes are 0.500, 0.608, and 0.718 respectively. The higher mean values in G and B channels may reflect the unique color properties of desert landscapes. Water For water scenes, the mean values are 0.347, 0.284, and 0.186 for the R, G, and B channels respectively. This could reflect the deeper and darker tones generally found in water bodies. Green Area Green areas show mean values of 0.298, 0.253, and 0.154 for R, G, and B color channels respectively. The low mean values, especially in the B channel, may be due to the dominance of green vegetation in these areas. Cloudy Cloudy scenes show the mean values for R, G, and B color channels to be 0.587, 0.628, and 0.624 respectively. This distribution, with fairly similar values across all three channels, could be due to the diffuse lighting conditions generally found in cloudy environments. This analysis provides a descriptive overview of the pixel intensities and color channel distributions for each of the four categories. These insights could be useful for further data analysis or to inform image processing techniques. Conclusion Distribution Pattern & Pixel Density: The distribution pattern of pixel intensity can help us understand the characteristics of different classes in our dataset. For example, a class like 'cloudy' has a wide range of pixel intensities and higher standard deviation, indicating more variation within this class. This could mean that a model will need to be more robust and flexible to handle such variability. On the other hand, classes like 'desert' and 'green' have lower standard deviations, indicating less intra-class variation, which could be easier for the model to learn. Moreover, understanding the average pixel density can help us in setting appropriate thresholds for image segmentation and further processing.
   Understanding the color channel distributions is vital, particularly in RGB images where different color channels can provide distinct information. If a certain class has higher intensities in a particular color channel consistently (like 'blue' for 'desert'), the model could potentially leverage this information to improve accuracy. For example, if a model is poor at using color information, you might opt for a different model that can better handle this aspect of the data. Goal The goal of a model is a key factor that guided the model selection process. The type of problem we are trying to solve, the metrics we aim to optimize, and the context in which the model will be used heavily influenced our decision. Since the goal of the mode is to accurately classify different types of geographical features in satellite imagery (like 'water', 'desert', 'cloudy', 'green'), then we want a model that can perform this multi-class classification effectively. Given that we're dealing with images, convolutional neural network (CNN) models are often a good choice due to their ability to capture spatial relationships and recognize patterns in image data.">
-    <h1>Factors Influencing Model Selection</h1>
-    <ul>
-      <li>Amount and Type of Data: A large amount of image data demands a model capable of learning complex patterns.</li>
-      <li>Distribution Pattern: Pixel intensity distribution varies between classes; some classes have a wide range of pixel intensities, indicating more variability.</li>
-      <li>Pixel Density and Color Channel Distributions: Understanding these can help set appropriate thresholds for image segmentation and processing, and can indicate which models might be more effective.</li>
-      <li>Goal: The primary goal is accurate multi-class classification of satellite images.</li>
-    </ul>
-    <figure>
-      <img src=""C:\Users\calve\Downloads\static_visuals\pixel_color_distribution.png" alt="Grid of Distribution Plots">
-    </figure>
+  <div style="display: flex; align-items: center;">
+      <div>
+        <h1 style="font-size: 32px; text-align: left;">Factors Influencing Model Selection</h1>
+        <ul style="font-size: 18px; text-align: left;">
+          <li>Amount and Type of Data: A large amount of image data demands a model capable of learning complex patterns.</li>
+          <li>Distribution Pattern: Pixel intensity distribution varies between classes; some classes have a wide range of pixel intensities, indicating more variability.</li>
+          <li>Pixel Density and Color Channel Distributions: Understanding these can help set appropriate thresholds for image segmentation and processing, and can indicate which models might be more effective.</li>
+          <li>Goal: The primary goal is accurate multi-class classification of satellite images.</li>
+        </ul>
+      </div>
+      <div>
+        <figure style="text-align: left;">
+          <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/pixel_color_distribution.png" alt="Grid of Distribution Plots">
+        </figure>
+      </div>
+    </div>
   </section>
 
 ---
@@ -321,9 +338,9 @@ ResNet, short for Residual Network, is a type of Convolutional Neural Network (C
 
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes= "Model Building Decision Processes Training and Fine Tuning Each epoch took a really long time but since we were getting well performing metrics early on we added an early stop condition. Other than that the ResNet performed exceptionally and no further tuning was necessary.">
     <div class="top-images">
-      <img src="C:/Users/calve/Downloads/static_visuals/early_stop.jpg"" alt="early_stop" class="large-image">
+      <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/early_stop.jpg" alt="early_stop" class="large-image">
       <h1>Model Building Decision Processes</h1>
-      <img src="C:/Users/calve/Downloads/static_visuals/epoch.jpg" alt="epochs" class="large-image">
+      <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/epoch.jpg" alt="epochs" class="large-image">
     </div>
     <ul>
       <li>The model was trained with an early stopping condition to improve training efficiency.</li>
@@ -354,7 +371,7 @@ ResNet, short for Residual Network, is a type of Convolutional Neural Network (C
       <li>'Water' scenes also have minor misclassifications, with one instance each mislabeled as 'Cloudy' and 'Green Area'.</li>
       <li>Overall, the model shows a high degree of accuracy with the majority of instances correctly classified for each category.</li>
     </ul>
-    <img src=""C:/Users/calve/Downloads/static_visuals/confusion_matrix_heatmap.png" alt="Confusion Matrix Heatmap">
+    <img "https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/confusion_matrix_heatmap.png" alt="Confusion Matrix Heatmap">
   </section>
 
 ---
@@ -376,7 +393,7 @@ ResNet, short for Residual Network, is a type of Convolutional Neural Network (C
         <img src="C:/Users/calve/Downloads/static_visuals/recall.png" alt="Recall">
       </div>
       <div class="grid-item">
-        <img src="C:/Users/calve/Downloads/static_visuals/f1.png" alt="F1">
+        <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/f1.png" alt="F1">
       </div>
       <div class="grid-item">
         <img src="C:/Users/calve/Downloads/static_visuals/support.png" alt="Support">
@@ -424,11 +441,22 @@ ResNet, short for Residual Network, is a type of Convolutional Neural Network (C
 
 ---
 
-</div>
   </div>
+</div>
   <script>
-    // Initialize the Reveal.js presentation
+    /// Initialize the Reveal.js presentation
     Reveal.initialize();
+    // Zoom function
+    function zoomInOut() {
+      const slidesElement = document.querySelector('.reveal .slides');
+      if (slidesElement.style.transform === 'scale(1)') {
+        slidesElement.style.transformOrigin = 'center center'; // Set the transform origin to the center
+        slidesElement.style.transform = 'scale(1.5)'; // Adjust the zoom level as needed
+      } else {
+        slidesElement.style.transformOrigin = ''; // Reset the transform origin
+        slidesElement.style.transform = 'scale(1)';
+      }
+    }
   </script>
 </body>
 </html>
