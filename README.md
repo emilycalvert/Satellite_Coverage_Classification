@@ -6,13 +6,13 @@ This repository contains all the codes and results of our Satellite Coverage Cla
 
 - data.zip: This zip file folder contains the dataset used for this project. The dataset includes various types of satellite images, all separated into four distinct folders according to the landscape type they represent.
 
-- Preprocessing_eda.ipynb: This Jupyter notebook contains all the preprocessing steps and the exploratory data analysis (EDA) done on the satellite images.
+- preprocessing_eda.ipynb: This Jupyter notebook contains all the preprocessing steps and the exploratory data analysis (EDA) done on the satellite images.
 
 - presentation.md: this markdown has the presentation, you can see it with vscode reveal in visual studio
 
 - resnet_cnn_model.ipynb: This notebook contains  first the splitting of the data, the resnet model training, validation and test, the model's results and the performance of the model (confution matrix, classification report). It can be used for making predictions on new satellite images.
 
-- REDME.md: this file
+- README.md: this file
 
 ## Getting Started
 
