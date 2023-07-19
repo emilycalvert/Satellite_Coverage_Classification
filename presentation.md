@@ -4,8 +4,6 @@
   <!-- Reveal.js dependencies -->
   <link rel="stylesheet" href="https://revealjs.com/dist/reveal.css">
   <script src="https://revealjs.com/dist/reveal.js"></script>
-  <script src="https://revealjs.com/dist/reveal.js"></script>
-
   <!-- Custom CSS -->
   <style>
     /* Autofit text */
@@ -14,18 +12,16 @@
       align-items: center;
       justify-content: center;
     }
-
     .reveal .slides section {
       font-size: 2vw; /* Adjust the font size as needed */
     }
-
     /* Autofit images */
     .reveal .slides img {
       max-width: 70%;
       max-height: 70%;
       object-fit: contain;
+      pointer-events: none; /* Disable pointer events on images to allow zooming */
     }
-
     /* Zoom button */
     .zoom-button {
       position: fixed;
@@ -36,8 +32,6 @@
   </style>
 </head>
 <body>
-  <button class="zoom-button" onclick="zoomInOut()">Zoom</button>
-
   <div class="reveal">
     <div class="slides">
 
@@ -71,7 +65,7 @@
     <p><b>Advantages and Applications of GeoSpatial Analytics and AI using Satellite Imagery</b></p>
     <p>Geospatial analytics combined with Artificial Intelligence (AI) has become a game-changer in many industries. This combination empowers us to derive critical insights and patterns from vast volumes of satellite imagery, which can be incredibly beneficial for a variety of applications. It is essentially reshaping how we understand and interact with our world, helping us solve complex problems by illuminating new insights.</p>
     <div class="illustration">
-      <img src="C:/Users/calve/Downloads/static_visuals/sattelite.png" alt="Satellite" width="400">
+      <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/sattelite.png" alt="Satellite" width="400">
     </div>
   </section>
 
@@ -83,7 +77,7 @@
     <ul>
       <li>As satellites pass over the same locations multiple times, they create a historical archive of images. We can analyze these images to identify changes and trends over time, providing powerful insights into patterns of growth, decline, or transformation.</li>
     </ul>
-    <img src="path/to/illustration.jpg" alt="Illustration" style="max-width: 70%; margin: 20px auto;">
+    <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/sample_images_loaded.png" alt="Illustration" style="max-width: 70%; margin: 20px auto;">
   </section>
 
 ---
@@ -99,7 +93,7 @@
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)">
     <h3>Agriculture</h3>
     <p>By analyzing satellite imagery, farmers can identify areas of stress in crops long before they might be visible to the naked eye. This can lead to early intervention, potentially saving vast swathes of crops from disease or pest infestation.</p>
-    <img src="path/to/illustration.png" alt="Agriculture Illustration" class="illustration">
+    <img src="https://media.istockphoto.com/id/604352710/photo/farm-machines-harvesting-corn-for-feed-or-ethanol.jpg?s=612x612&w=0&k=20&c=s5uKT7q_jHHRMhCn5SUIrlo0rVyEM2FR3Hh6sVbNNTE=" alt="Agriculture Illustration" class="illustration">
   </section>
 
 ---
@@ -107,8 +101,7 @@
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)">
     <h3>Environmental Science</h3>
     <div class="illustration">
-      <!-- Insert your engaging illustration here -->
-      <!-- Add appropriate image HTML code or embed external content -->
+      <img src="https://media.istockphoto.com/id/918080176/photo/aerial-view-forest-fire-busuanga-palawan-philippines.jpg?s=612x612&w=0&k=20&c=55JuOKGXfyhCgYUk2LZionZH1L8SmMXTsUu8TdYYX-o=" alt="Environmental Illustration" class="illustration">
     </div>
     <p>This technology is being used to monitor deforestation, track wildlife populations, and assess the impact of natural disasters. We can analyze satellite data to help direct emergency services to the most affected areas.</p>
   </section>
@@ -118,16 +111,13 @@
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)">
     <h3>Urban Planning and Infrastructure</h3>
     <p>Planners can analyze satellite images and gain insights into population growth, land use changes, and infrastructure development. This can help inform decisions about where to build new roads, schools, and other public infrastructure.</p>
+    <img src="https://media.wired.com/photos/59333f132a38e4432c4b8cda/master/w_2560%2Cc_limit/d2.jpg">
   </section>
 
 ---
 
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)">
     <h2 class="slide-title">Conclusion</h2>
-    <div class="illustration">
-      <!-- Insert your engaging illustration here -->
-      <img src="path_to_your_image.png" alt="Illustration">
-    </div>
     <p>Geospatial analytics and AI using satellite imagery offer powerful tools for gaining insights and solving complex problems across a wide range of industries. These technologies allow us to understand our world in greater detail and make more informed decisions about how to manage our resources and plan for the future.</p>
   </section>
 
@@ -136,10 +126,6 @@
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)">
     <h1>Problem Statement</h1>
     <p>Manual Classification of Satellite Imagery is both expensive and time-consuming, yet it is a vital task for identifying cloud coverage and determining the quality of satellite data.</p>
-    <!-- Insert your illustration here -->
-    <div class="illustration">
-      <!-- Place your illustration code or image here -->
-    </div>
   </section>
 
 ---
@@ -147,9 +133,6 @@
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)">
     <h2>The Importance of Classification</h2>
     <p>Without proper classification, we are left with single snapshots of imagery for our analysis. This leads to unrepeatable results and highly localized analyses.</p>
-    <div class="illustration">
-      <!-- Place your illustration code or image here -->
-    </div>
   </section>
 
 ---
@@ -163,7 +146,7 @@
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)">
     <h3>Volume of Data</h3>
     <p>Satellite imagery is incredibly dense and memory intensive. With 50 years of accessible satellite data, and more being collected every hour, the potential scale for geospatial analysis is vast. However, computing and processing power presents a significant constraint.</p>
-    <img src="path_to_your_illustration_image.jpg" alt="Volume of Data Illustration">
+    <img src="https://www.visualcapitalist.com/wp-content/uploads/2020/10/satellites_shareable.jpg" alt="Volume of Data Illustration">
   </section>
 
 ---
@@ -171,7 +154,7 @@
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)">
     <h3>Time Consumption</h3>
     <p>Given the scale and pixel density, manually identifying each raster in an image can take hours.</p>
-    <!-- Place your illustration here -->
+    <img src="https://media.tenor.com/RVvnVPK-6dcAAAAM/reload-cat.gif" alt="Volume of Data Illustration">
   </section>
 
 ---
@@ -189,7 +172,7 @@
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)">
     <h1>Our Solution</h1>
     <p>We propose a model for the classification of coverage type in satellite imagery. This automated pre-processing tool will determine the quality of imagery by identifying cloud coverage and other relevant features, depending on your organization’s needs.</p>
-    <img src="path/to/image.jpg" alt="Engaging Image" style="width: 60%; margin: auto;">
+    <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/data_source.jpg">
   </section>
 
 ---
@@ -197,17 +180,14 @@
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes= "Our project addresses the above concerns by producing a model for classification of coverage type in satellite imagery. This automation of preprocessing will determine quality of imagery by identifying cloud coverage. Then depending on your organization’s needs we can identify vegetation, desert, or water coverage. Applications are endless. Below are some examples on how automating classification of imagery will contribute to your organization.">
     <h2>Applications</h2>
     <p>The possibilities for applying this technology are endless. This slide highlights some examples of how automated classification of imagery will contribute to your organization.</p>
-    <div style="text-align: center;">
-      ![Engaging Image](image.jpg)
-    </div>
   </section>
 
 ---
 
-  <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes= "With the proper data management, tuning of hyperparameters, and data augmentation, this mode has the potential to meet the needs of the project at hand. Deploying the model for classification will give your organization the ability to process more data and build more robust models. By replacing manual classification and tokenizing of raster layers with automated processes, your organization can use more detailed imagery and larger datasets.">
+  <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes= "With the proper data management, tuning of hyperparameters, and data augmentation, this mode has the potential to meet the needs of the project at hand. Deploying the model for classification will give your organization the ability to process more data and build more robust models. By replacing manual classification and tokenizing of raster layers with automated processes, your organization can use more detailed imagery and larger datasets. With the GeoSpatial Data Industry growing rapidly scalability of ogranizational capabilities will be key to staying ahead of the curve">
     <h3>Scalability</h3>
     <p>Our model is designed to meet the needs of any project. With the right data management, tuning of hyperparameters, and data augmentation, you can process more data and build more robust models. Our solution enables the use of more detailed imagery and larger datasets.</p>
-    <img src="path/to/your/image.jpg" alt="Engaging Image" style="max-width: 80%; margin-top: 1rem;">
+    <img src="https://www.grandviewresearch.com/static/img/research/us-gis-market.png" alt="Engaging Image" style="max-width: 80%; margin-top: 1rem;">
   </section>
 
 ---
@@ -215,7 +195,7 @@
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes= "Our model can be deployed and evaluate the quality of imagery and pertinence to your project prior to moving dense data across platforms, making large api calls/orders, and preprocessing whole sets of imagery.">
     <h3>Efficiency</h3>
     <p>The model can quickly evaluate the quality and relevance of imagery before transferring dense data or making large API calls. This process increases efficiency by focusing resources only on pertinent data sets.</p>
-    <img src="path/to/your/image.jpg" alt="Engaging Image" style="max-width: 60%; margin: 30px auto;">
+    <img src="https://i.imgflip.com/6f0uiu.jpg" alt="Engaging Image" style="max-width: 60%; margin: 30px auto;">
   </section>
 
 ---
@@ -223,7 +203,7 @@
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes= "By identifying an appropriate model using distribution patterns we can produce a model that will follow the same processes of classification with each iteration. This leads to reproducible results.">
     <h3>Consistency</h3>
     <p>Our model ensures consistency by employing the same processes of classification with each iteration. This leads to reproducible results.</p>
-    <img src="path/to/image.jpg" alt="Engaging Image" style="width: 50%; margin-top: 2rem;">
+    <img src="https://www.hitachi.com/rd/sc/aiblog/035/image/fig1.jpg" alt="Engaging Image" style="width: 50%; margin-top: 2rem;">
   </section>
 
 ---
@@ -282,34 +262,28 @@ Center Crop 224x224 pixels test it in a standard and consistent way (center crop
 
 ---
 
-  <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes="Amount and Type of Data  A large amount of data can indicate necessity for a deeper neural network that can learn more complex patterns. The type of data also matters: is it tabular, image, text, or some other type of data? For image data, convolutional neural networks (CNNs). Distribution Pattern Pixel Intensity Distribution Desert The pixel intensity distribution for desert images shows a high mean value of 0.608, indicating that desert scenes are generally brightly lit. The range of pixel intensities, from a minimum of 0.418 to a maximum of 0.722, is relatively small. With a standard deviation of 0.058, the intensities appear to be closely grouped around the mean. WaterWater scenes exhibit a low mean pixel intensity of 0.272, possibly due to deeper water absorbing more light. The standard deviation is higher at 0.085, indicating a wider spread of pixel intensities. The pixel intensities range from 0.166 to 0.519, indicating a diversity in lighting conditions for water scenes. Green Area
-  For green area images, the mean pixel intensity is even lower than for water, at 0.235. This could be due to the light absorption properties of plants. The standard deviation is very low at 0.025, suggesting that pixel intensities are very consistent within green areas. This is likely due to the consistent color of vegetation. The range of pixel intensities, from 0.169 to 0.361, is the narrowest of all categories. Cloudy Cloudy scenes present the highest mean pixel intensity of all categories at 0.613. This could be due to light scattering from the clouds. However, the standard deviation is also the highest at 0.118, indicating a wider range of pixel intensities. This variation might be due to differing levels of cloud cover and thickness. The range of pixel intensities is also the widest, from 0.089 to 0.959, suggesting a large diversity in lighting conditions for cloudy scenes.Color Channel Distributions In terms of color channel distributions, different patterns emerge for each category.Desert The mean values for R, G, and B color channels in desert scenes are 0.500, 0.608, and 0.718 respectively. The higher mean values in G and B channels may reflect the unique color properties of desert landscapes. Water For water scenes, the mean values are 0.347, 0.284, and 0.186 for the R, G, and B channels respectively. This could reflect the deeper and darker tones generally found in water bodies. Green Area Green areas show mean values of 0.298, 0.253, and 0.154 for R, G, and B color channels respectively. The low mean values, especially in the B channel, may be due to the dominance of green vegetation in these areas. Cloudy Cloudy scenes show the mean values for R, G, and B color channels to be 0.587, 0.628, and 0.624 respectively. This distribution, with fairly similar values across all three channels, could be due to the diffuse lighting conditions generally found in cloudy environments. This analysis provides a descriptive overview of the pixel intensities and color channel distributions for each of the four categories. These insights could be useful for further data analysis or to inform image processing techniques. Conclusion Distribution Pattern & Pixel Density: The distribution pattern of pixel intensity can help us understand the characteristics of different classes in our dataset. For example, a class like 'cloudy' has a wide range of pixel intensities and higher standard deviation, indicating more variation within this class. This could mean that a model will need to be more robust and flexible to handle such variability. On the other hand, classes like 'desert' and 'green' have lower standard deviations, indicating less intra-class variation, which could be easier for the model to learn. Moreover, understanding the average pixel density can help us in setting appropriate thresholds for image segmentation and further processing.
-  Understanding the color channel distributions is vital, particularly in RGB images where different color channels can provide distinct information. If a certain class has higher intensities in a particular color channel consistently (like 'blue' for 'desert'), the model could potentially leverage this information to improve accuracy. For example, if a model is poor at using color information, you might opt for a different model that can better handle this aspect of the data. Goal The goal of a model is a key factor that guided the model selection process. The type of problem we are trying to solve, the metrics we aim to optimize, and the context in which the model will be used heavily influenced our decision. Since the goal of the mode is to accurately classify different types of geographical features in satellite imagery (like 'water', 'desert', 'cloudy', 'green'), then we want a model that can perform this multi-class classification effectively. Given that we're dealing with images, convolutional neural network (CNN) models are often a good choice due to their ability to capture spatial relationships and recognize patterns in image data.">
-  <div style="display: flex; align-items: center;">
-      <div>
-        <h1 style="font-size: 32px; text-align: left;">Factors Influencing Model Selection</h1>
-        <ul style="font-size: 18px; text-align: left;">
-          <li>Amount and Type of Data: A large amount of image data demands a model capable of learning complex patterns.</li>
-          <li>Distribution Pattern: Pixel intensity distribution varies between classes; some classes have a wide range of pixel intensities, indicating more variability.</li>
-          <li>Pixel Density and Color Channel Distributions: Understanding these can help set appropriate thresholds for image segmentation and processing, and can indicate which models might be more effective.</li>
-          <li>Goal: The primary goal is accurate multi-class classification of satellite images.</li>
-        </ul>
-      </div>
-      <div>
-        <figure style="text-align: left;">
-          <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/pixel_color_distribution.png" alt="Grid of Distribution Plots">
-        </figure>
-      </div>
+<section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes="Amount and Type of Data  A large amount of data can indicate necessity for a deeper neural network that can learn more complex patterns. The type of data also matters: is it tabular, image, text, or some other type of data? For image data, convolutional neural networks (CNNs). Distribution Pattern Pixel Intensity Distribution Desert The pixel intensity distribution for desert images shows a high mean value of 0.608, indicating that desert scenes are generally brightly lit. The range of pixel intensities, from a minimum of 0.418 to a maximum of 0.722, is relatively small. With a standard deviation of 0.058, the intensities appear to be closely grouped around the mean. WaterWater scenes exhibit a low mean pixel intensity of 0.272, possibly due to deeper water absorbing more light. The standard deviation is higher at 0.085, indicating a wider spread of pixel intensities. The pixel intensities range from 0.166 to 0.519, indicating a diversity in lighting conditions for water scenes. Green Area
+For green area images, the mean pixel intensity is even lower than for water, at 0.235. This could be due to the light absorption properties of plants. The standard deviation is very low at 0.025, suggesting that pixel intensities are very consistent within green areas. This is likely due to the consistent color of vegetation. The range of pixel intensities, from 0.169 to 0.361, is the narrowest of all categories. Cloudy Cloudy scenes present the highest mean pixel intensity of all categories at 0.613. This could be due to light scattering from the clouds. However, the standard deviation is also the highest at 0.118, indicating a wider range of pixel intensities. This variation might be due to differing levels of cloud cover and thickness. The range of pixel intensities is also the widest, from 0.089 to 0.959, suggesting a large diversity in lighting conditions for cloudy scenes.Color Channel Distributions In terms of color channel distributions, different patterns emerge for each category.Desert The mean values for R, G, and B color channels in desert scenes are 0.500, 0.608, and 0.718 respectively. The higher mean values in G and B channels may reflect the unique color properties of desert landscapes. Water For water scenes, the mean values are 0.347, 0.284, and 0.186 for the R, G, and B channels respectively. This could reflect the deeper and darker tones generally found in water bodies. Green Area Green areas show mean values of 0.298, 0.253, and 0.154 for R, G, and B color channels respectively. The low mean values, especially in the B channel, may be due to the dominance of green vegetation in these areas. Cloudy Cloudy scenes show the mean values for R, G, and B color channels to be 0.587, 0.628, and 0.624 respectively. This distribution, with fairly similar values across all three channels, could be due to the diffuse lighting conditions generally found in cloudy environments. This analysis provides a descriptive overview of the pixel intensities and color channel distributions for each of the four categories. These insights could be useful for further data analysis or to inform image processing techniques. Conclusion Distribution Pattern & Pixel Density: The distribution pattern of pixel intensity can help us understand the characteristics of different classes in our dataset. For example, a class like 'cloudy' has a wide range of pixel intensities and higher standard deviation, indicating more variation within this class. This could mean that a model will need to be more robust and flexible to handle such variability. On the other hand, classes like 'desert' and 'green' have lower standard deviations, indicating less intra-class variation, which could be easier for the model to learn. Moreover, understanding the average pixel density can help us in setting appropriate thresholds for image segmentation and further processing.
+Understanding the color channel distributions is vital, particularly in RGB images where different color channels can provide distinct information. If a certain class has higher intensities in a particular color channel consistently (like 'blue' for 'desert'), the model could potentially leverage this information to improve accuracy. For example, if a model is poor at using color information, you might opt for a different model that can better handle this aspect of the data. Goal The goal of a model is a key factor that guided the model selection process. The type of problem we are trying to solve, the metrics we aim to optimize, and the context in which the model will be used heavily influenced our decision. Since the goal of the mode is to accurately classify different types of geographical features in satellite imagery (like 'water', 'desert', 'cloudy', 'green'), then we want a model that can perform this multi-class classification effectively. Given that we're dealing with images, convolutional neural network (CNN) models are often a good choice due to their ability to capture spatial relationships and recognize patterns in image data.">
+<div style="display: flex; align-items: center;">
+    <div style="flex: 1;">
+      <h1 style="font-size: 32px; text-align: left;">Factors Influencing Model Selection</h1>
+      <ul style="font-size: 18px; text-align: left;">
+        <li>Amount and Type of Data: A large amount of image data demands a model capable of learning complex patterns.</li>
+        <li>Distribution Pattern: Pixel intensity distribution varies between classes; some classes have a wide range of pixel intensities, indicating more variability.</li>
+        <li>Pixel Density and Color Channel Distributions: Understanding these can help set appropriate thresholds for image segmentation and processing, and can indicate which models might be more effective.</li>
+        <li>Goal: The primary goal is accurate multi-class classification of satellite images.</li>
+      </ul>
     </div>
-  </section>
+    <div style="flex: 1; text-align: right;">
+      <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/pixel_color_distribution.png" alt="Grid of Distribution Plots" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
+</section>
 
 ---
 
-  <!-- Insert Interactive Visual Here  -->
-
----
-
-  <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes="How it works
+<section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes="How it works
 ResNet, short for Residual Network, is a type of Convolutional Neural Network (CNN) for image recognition. As we add more layers to a CNN, the network becomes more capable of learning complex patterns in the data.  When a network gets too deep, it suffers from something called the vanishing gradient problem. This is like trying to hear a whisper in a noisy room - the important details (gradients) become too small to detect and learn from, making the network hard to improve. ResNet tackles the vanishing gradient problem by using a skip connection.Let's imagine a set of layers in the neural network as a box that does some complex transformations on the data we feed into it. The data, or the 'input', is like a ball that we throw into this box. After the ball has bounced around inside and undergone changes (the transformations), it comes out the other side - the 'output'.Now, in a regular neural network, each layer would just take the output from the previous layer and feed it into its own set of transformations. The ball would go into one box, come out transformed, and immediately go into the next box. In a ResNet, however, we have an additional path - the 'skip connection' or 'shortcut'. Alongside the usual path (ball goes into box, gets transformed, comes out), we have a straight path that bypasses the box. It's like throwing two balls - one goes into the box, the other travels straight to the end. At the end, we combine both balls - the one that went through the box and the one that bypassed it. This combination is the final output that is fed into the next layer. The effect of this setup is that even if the transformation in the box is very complex and the ball that goes through it comes out very changed, we always have the original ball that bypassed the box. This way, we keep some of the original, unaltered information which can help the network learn more effectively, especially when it is very deep. This is the residual part of the ResNet - we add the original input (the residue) to the output. This seemingly simple idea has a profound impact. The core idea behind ResNet is essentially that deeper networks should perform at least as well as shallower ones. By using these shortcuts, layers are able to learn identity functions that ensure their outputs are at least as informative as their inputs. This means that adding more layers shouldn't hurt performance, and indeed, ResNets can successfully train networks with hundreds (or even thousands) of layers.">
     <h1>ResNet Convolution Neural Network</h1>
     <ul>
@@ -317,7 +291,7 @@ ResNet, short for Residual Network, is a type of Convolutional Neural Network (C
       <li>ResNet uses skip connections to tackle the "vanishing gradient problem" in deep neural networks.</li>
       <li>ResNet can handle a large amount of high-dimensional data, such as images, efficiently.</li>
     </ul>
-    <!-- Insert illustration here -->
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200424011138/ResNet.PNG">
   </section>
 
 ---
@@ -330,34 +304,37 @@ ResNet, short for Residual Network, is a type of Convolutional Neural Network (C
       <li>ResNet's convolutional layers can detect subtle differences in color channel distributions, helping to distinguish between different classes.</li>
     </ul>
     <div class="image-container">
-      <img src="path/to/your/image.jpg" alt="Illustration" width="600" height="400">
+      <img src="https://www.researchgate.net/profile/Shihong-Du-2/publication/300081672/figure/fig4/AS:369863638962179@1465193771147/Feature-extraction-with-a-CNN-framework-Training-samples-are-extracted-from-the-original.png" alt="Illustration" width="600" height="400">
     </div>
   </section>
 
 ---
 
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes= "Model Building Decision Processes Training and Fine Tuning Each epoch took a really long time but since we were getting well performing metrics early on we added an early stop condition. Other than that the ResNet performed exceptionally and no further tuning was necessary.">
-    <div class="top-images">
-      <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/early_stop.jpg" alt="early_stop" class="large-image">
-      <h1>Model Building Decision Processes</h1>
-      <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/epoch.jpg" alt="epochs" class="large-image">
+    <div class="image-container">
+        <img class="top-left" src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/testing.jpg" alt="Validation">
+        <img class="top-right" src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/validate.jpg" alt="Testing">
     </div>
-    <ul>
-      <li>The model was trained with an early stopping condition to improve training efficiency.</li>
-      <li>The ResNet model performed exceptionally well, negating the need for further fine-tuning.</li>
-    </ul>
-    <div class="bottom-images">
-      <img src="C:/Users/calve/Downloads/static_visuals/validate.jpg" alt="validation" class="small-image">
-      <img src="C:/Users/calve/Downloads/static_visuals/testing.jpg"" alt="test" class="small-image">
+    <div class="content">
+      <h2>Model Training</h>
+        <p class="small">
+          Model Building Decision Processes
+          The model was trained with an early stopping condition to improve training efficiency. The ResNet model performed exceptionally well, negating the need for further fine-tuning.
+        </p>
+      </h2>
     </div>
-  </section>
+    <div class="image-container">
+      <img class="bottom-left" src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/epoch.jpg" alt="Epoch Image" style="max-width: 30%; height: auto;">
+      <img class="bottom-right" src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/early_stop.jpg" alt="Early Stop Image" style="max-width: 30%; height: auto;">
+    </div>
+</section>
 
 ---
 
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)">
     <h1>Performance</h1>
     <hr>
-    <img src=""C:/Users/calve/Downloads/static_visuals/preformance.jpg" alt="Preformance">
+    <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/preformance.jpg" alt="Preformance">
   </section>
 
 ---
@@ -371,12 +348,22 @@ ResNet, short for Residual Network, is a type of Convolutional Neural Network (C
       <li>'Water' scenes also have minor misclassifications, with one instance each mislabeled as 'Cloudy' and 'Green Area'.</li>
       <li>Overall, the model shows a high degree of accuracy with the majority of instances correctly classified for each category.</li>
     </ul>
-    <img "https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/confusion_matrix_heatmap.png" alt="Confusion Matrix Heatmap">
+    <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/confusion_matrix_heatmap.png" alt="Confusion Matrix Heatmap" style="max-width: 35%; height: auto;">
   </section>
 
 ---
 
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)" data-notes="Classification Report: The classification report presents key metrics to evaluate the performance of the classification model. Precision: This indicates the ability of the classifier not to label an instance positive that is actually negative. The model shows high precision scores for all classes, indicating a low rate of false positives.Recall: This indicates the ability of the classifier to find all positive instances. The model shows high recall scores for 'Cloudy' and 'Desert', indicating a low rate of false negatives. However, 'Green Area' and 'Water' have lower recall values, reflecting some misclassifications. F1-Score: This is a weighted harmonic mean of precision and recall. The model's F1 scores are close to 1 for 'Cloudy' and 'Desert', indicating a good balance between precision and recall. However, 'Green Area' and 'Water' show lower F1 scores due to the recall's influence. Support: This is the number of actual occurrences of the class in the dataset. The support scores show a balanced distribution of instances for 'Cloudy', 'Green Area', and 'Water'. 'Desert' has a lower number of instances in the test set. Accuracy: This is the ratio of the total number of correct predictions to the total number of input samples. The model has a high accuracy score of 0.91, indicating it made correct predictions most of the time.">
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .grid-item {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
     <h2>Classification Report</h2>
     <ul>
       <li>Precision: High precision scores for all classes.</li>
@@ -387,19 +374,20 @@ ResNet, short for Residual Network, is a type of Convolutional Neural Network (C
     </ul>
     <div class="grid-container">
       <div class="grid-item">
-        <img src="C:/Users/calve/Downloads/static_visuals/precision.png" alt="Precision">
+        <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/precision.png" alt="Precision">
       </div>
       <div class="grid-item">
-        <img src="C:/Users/calve/Downloads/static_visuals/recall.png" alt="Recall">
+        <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/recall.png" alt="Recall">
       </div>
       <div class="grid-item">
         <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/f1.png" alt="F1">
       </div>
       <div class="grid-item">
-        <img src="C:/Users/calve/Downloads/static_visuals/support.png" alt="Support">
+        <img src="https://raw.githubusercontent.com/emilycalvert/Satellite_Coverage_Classification/main/static_visuals/support.png" alt="Support">
       </div>
     </div>
   </section>
+
 
 ---
 
@@ -414,7 +402,6 @@ ResNet, short for Residual Network, is a type of Convolutional Neural Network (C
       <li>Classes with narrower ranges of pixel intensities might be easier to distinguish.</li>
       <li>Imbalance in class instances can influence model performance.</li>
     </ul>
-    <img src="path/to/unique_visual.png" alt="Unique Visual">
   </section>
 
 ---
@@ -428,7 +415,6 @@ ResNet, short for Residual Network, is a type of Convolutional Neural Network (C
       <li>Synthesize or provide more data.</li>
       <li>Identify stronger distribution pattern on lower-performing classes.</li>
     </ul>
-    <img src="path/to/your-unique-visual.jpg" alt="Unique Visual">
   </section>
 
 ---
@@ -436,15 +422,15 @@ ResNet, short for Residual Network, is a type of Convolutional Neural Network (C
   <section data-background="linear-gradient(to bottom right, #002366, #87CEEB)">
     <h1 style="font-size: 72px; font-weight: bold; text-transform: uppercase;">Thank You!</h1>
     <p style="font-size: 24px; font-weight: bold; color: #FFD700;">We appreciate your attention</p>
-    <img src="path_to_image" alt="Thank You Image" style="width: 400px;">
+    <img src="https://media.tenor.com/m-2XXQuq-OwAAAAM/peace-out.gif" alt="Thank You Image" style="width: 400px;">
   </section>
 
 ---
 
+    </div>
   </div>
-</div>
   <script>
-    /// Initialize the Reveal.js presentation
+    // Initialize the Reveal.js presentation
     Reveal.initialize();
     // Zoom function
     function zoomInOut() {
